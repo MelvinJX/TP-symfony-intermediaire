@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block title %}
-        <title>Bases</title>
+        <title>Bases(admin)</title>
     {% endblock %}
 
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
@@ -17,10 +17,13 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="{{ path('products_list') }}">Produits</a>
+                        <a href="{{ path('admin_products_list') }}">Produits</a> 
                     </li>
                     <li>
-                        <a href="{{ path('categories_list') }}">Categories</a>
+                        <a href="{{ path('admin_categories_list') }}">Categories</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('admin_add_category') }}">Ajouter une categorie</a>
                     </li>
                 </ul>
             </nav>
