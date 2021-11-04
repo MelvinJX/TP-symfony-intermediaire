@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+        <title>Bases</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+</head>
+<body>
+    {% block header %}
+        <header>
+            <h1>TPSY i</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{{ path('products_list') }}">Produits</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('categories_list') }}">Categories</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    {% endblock %}
+
+    {% block main %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+</body>
+</html>

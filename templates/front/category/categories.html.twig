@@ -1,0 +1,14 @@
+{% extends "bases.html.twig" %}
+
+{% block main %}
+    <main>
+        <section>
+            <article>
+                {% for category  in categories %}
+                    <h3>{{ category.name }}</h3>
+                    <h3>{{ category.description }}</h3>
+                {% endfor %}
+            </article>
+        </section>
+    </main>
+{% endblock %}
