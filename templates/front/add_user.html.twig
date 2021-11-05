@@ -1,0 +1,16 @@
+{% extends "bases.html.twig" %}
+
+{% block main %}
+    <main>
+        <h2>Ajouter utilisateur</h2>
+        <section>
+            <article>
+                {{ form_start(userForm) }}
+                    {{ form_widget(userForm.email) }}
+                    {{ form_widget(userForm.password) }}
+                    {{ form_widget(userForm.submit) }}
+                {{ form_end(userForm) }}
+            </article>
+        </section>
+    </main>
+{% endblock %}
