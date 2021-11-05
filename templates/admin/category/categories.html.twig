@@ -6,8 +6,10 @@
         <section>
             {% for category  in categories %}
                 <article>
-                    <h3>{{ category.name }}</h3>
-                    <h3>{{ category.description }}</h3>
+                    <h3><a href="{{ path('admin_category', {'id' : category.id}) }}">{{ category.name }}</a></h3>
+                    <p>{{ category.description }}</p>
+                    <a href="{{ path('admin_update_category', {'id' : category.id}) }}">Modifier</a>
+                    <a href="{{ path('admin_delete_category', {'id' : category.id}) }}">Supprimer</a>
                 </article>
             {% endfor %}
         </section>

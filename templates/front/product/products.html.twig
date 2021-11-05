@@ -7,9 +7,9 @@
             {% for product  in products %}
                 <article>
                     <h3>{{ product.name }}</h3>
-                    <h3>{{ product.description }}</h3>
-                    <h3>{{ product.price }}</h3>
-                    <h3>{{ product.stock }}</h3>
+                    <p>{{ product.description }}</p>
+                    <span>Prix : {{ product.price }}</span>
+                    <span>Stock : {{ product.stock }}</span>
                 </article>
             {% endfor %}
         </section>

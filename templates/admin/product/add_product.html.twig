@@ -1,0 +1,19 @@
+{% extends "bases_admin.html.twig" %}
+
+{% block main %}
+    <main>
+        <h2>Ajouter un produit(admin)</h2>
+        <section>
+            <article>
+                {{ form_start(productForm) }}
+                    {{ form_widget(productForm.name) }}
+                    {{ form_widget(productForm.description) }}
+                    {{ form_widget(productForm.price) }}
+                    {{ form_widget(productForm.stock) }}
+                    {{ form_widget(productForm.category) }}
+                    {{ form_widget(productForm.submit) }}
+                {{ form_end(productForm) }}
+            </article>
+        </section>
+    </main>
+{% endblock %}

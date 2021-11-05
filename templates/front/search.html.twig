@@ -1,0 +1,25 @@
+{% extends "bases_admin.html.twig" %}
+
+{% block main %}
+    <main>
+        <h2>Produits(recherche)</h2>
+        <section>
+            {% if products is empty %}
+    
+                <h2>Aucun résultat pour : {{ motCle }}</h2>
+
+                {% else %}
+            
+                {% for product in products %}
+                    <article>
+                        <h3>{{ product.category.name }}</h3>
+                        <h4>{{ product.name }}</h4>
+                        <p>{{ product.description }}</p>
+                        <span>Prix : {{ product.price }}</span>
+                        <span>Stock : {{ product.stock }}</span>
+                    </article>
+                {% endfor %}
+            {% endif %}
+        </section>
+    </main>
+{% endblock %}

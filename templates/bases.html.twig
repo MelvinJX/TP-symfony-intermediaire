@@ -13,7 +13,7 @@
 <body>
     {% block header %}
         <header>
-            <h1>TPsy i</h1>
+            <h1>TPSy i</h1>
             <nav>
                 <ul>
                     <li>
@@ -24,6 +24,11 @@
                     </li>
                 </ul>
             </nav>
+
+            <form action="{{ path('search_product') }}" method="get">
+                <input type="search" name="search" id="search">
+                <input type="submit" value="Rechercher">
+            </form>
         </header>
     {% endblock %}
 
@@ -31,6 +36,9 @@
     {% endblock %}
 
     {% block footer %}
+        <footer>
+            <h1>TPSy i</h1>
+        </footer>
     {% endblock %}
 </body>
 </html>

@@ -13,11 +13,14 @@
 <body>
     {% block header %}
         <header>
-            <h1>TPsy i</h1>
+            <h1>TPSy i</h1>
             <nav>
                 <ul>
                     <li>
                         <a href="{{ path('admin_products_list') }}">Produits</a> 
+                    </li>
+                    <li>
+                        <a href="{{ path('admin_add_product') }}">Ajouter un produit</a>
                     </li>
                     <li>
                         <a href="{{ path('admin_categories_list') }}">Categories</a>
@@ -26,6 +29,11 @@
                         <a href="{{ path('admin_add_category') }}">Ajouter une categorie</a>
                     </li>
                 </ul>
+
+                <form action="{{ path('search_product') }}" method="get">
+                    <input type="search" name="search" id="search">
+                    <input type="submit" value="Rechercher">
+                </form>
             </nav>
         </header>
     {% endblock %}
@@ -34,6 +42,9 @@
     {% endblock %}
 
     {% block footer %}
+        <footer>
+            <h1>TPSy i</h1>
+        </footer>
     {% endblock %}
 </body>
 </html>

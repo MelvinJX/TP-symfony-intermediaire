@@ -19,6 +19,23 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
+    public function searchMotCle($motCle)
+    {
+        $queryBuilder = $this->createQueryBuilder('product');
+
+        $query = $queryBuilder
+        ->select('product')
+        ->leftJoin('product.category', 'category')
+        ->where('product.name LIKE :motCle')
+        ->orWhere('product.description LIKE :motCle')
+        ->orWhere('category.name LIKE :motCle')
+        ->orWhere('category.description LIKE :motCle')
+        ->setParameter('motCle', '%' . $motCle . '%')
+        ->getQuery();
+
+        return $query->getResult();
+    }
+
     // /**
     //  * @return Product[] Returns an array of Product objects
     //  */

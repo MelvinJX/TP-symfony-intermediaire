@@ -1,0 +1,16 @@
+{% extends "bases_admin.html.twig" %}
+
+{% block main %}
+    <main>
+        <h2>Modifier une categorie(admin)</h2>
+        <section>
+            <article>
+                {{ form_start(categoryForm) }}
+                    {{ form_widget(categoryForm.name) }}
+                    {{ form_widget(categoryForm.description) }}
+                    {{ form_widget(categoryForm.submit) }}
+                {{ form_end(categoryForm) }}
+            </article>
+        </section>
+    </main>
+{% endblock %}
